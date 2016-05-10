@@ -7,7 +7,7 @@ $Deploysettings = @{
     Name = 'CDCVMDeploy1'
     ResourceGroupName= $rg.ResourceGroupName 
     TemplateFile = 'https://raw.githubusercontent.com/markscholman/CDC-Germany/master/azuredeploy.json' 
-    TemplateParameterFile = 'https://raw.githubusercontent.com/markscholman/CDC-Germany/master/azuredeploy.parameters.json'
+    TemplateParameterFile = '.\azuredeploy.parameters.json'
     Verbose = $true
 }
 New-AzureRmResourceGroupDeployment @Deploysettings
