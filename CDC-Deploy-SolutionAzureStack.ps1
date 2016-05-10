@@ -1,4 +1,5 @@
-﻿Add-AzureRmAccount -Environment $env -Verbose
+﻿Set-Location "$env:USERPROFILE\Desktop\CDC-Germany"
+Add-AzureRmAccount -Environment $env -Verbose
 # Get Azure Stack Environment subscription
 Get-AzureRmSubscription -SubscriptionName "POC Subscription"  | Select-AzureRmSubscription
 
