@@ -2,11 +2,11 @@
 # Get Azure subscription
 Get-AzureRmSubscription -SubscriptionName "Visual Studio Enterprise with MSDN"  | Select-AzureRmSubscription
 
-$rg = New-AzureRmResourceGroup -Name CDC-Demo -Location "westeurope"
+$rg = New-AzureRmResourceGroup -Name MAS-Demo -Location "westeurope"
 $Deploysettings = @{
-    Name = 'CDCVMDeploy1'
+    Name = 'MASVMDeploy1'
     ResourceGroupName= $rg.ResourceGroupName 
-    TemplateFile = 'https://raw.githubusercontent.com/markscholman/CDC-Germany/master/azuredeploy.json' 
+    TemplateFile = 'https://raw.githubusercontent.com/markscholman/AzureStackDemo/master/azuredeploy.json' 
     TemplateParameterFile = '.\azuredeploy.parameters.json'
     Verbose = $true
 }

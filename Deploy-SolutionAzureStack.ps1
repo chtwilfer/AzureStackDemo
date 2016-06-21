@@ -1,13 +1,13 @@
-﻿Set-Location "$env:USERPROFILE\Desktop\CDC-Germany"
+﻿Set-Location "$env:USERPROFILE\Desktop\MAS-Demo"
 Add-AzureRmAccount -Environment $env -Verbose
 # Get Azure Stack Environment subscription
 Get-AzureRmSubscription -SubscriptionName "POC Subscription"  | Select-AzureRmSubscription
 
-$rg = New-AzureRmResourceGroup -Name CDC-Demo -Location "local"
+$rg = New-AzureRmResourceGroup -Name MAS-Demo -Location "local"
 $Deploysettings = @{
-    Name = 'CDCVMDeploy1'
+    Name = 'MASVMDeploy1'
     ResourceGroupName= $rg.ResourceGroupName 
-    TemplateFile = 'https://raw.githubusercontent.com/markscholman/CDC-Germany/master/azuredeploy.json' 
+    TemplateFile = 'https://raw.githubusercontent.com/markscholman/AzureStackDemo/master/azuredeploy.json' 
     TemplateParameterFile = '.\azuredeploy.parameters.json'
     Verbose = $true
 }
