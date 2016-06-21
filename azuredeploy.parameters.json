@@ -3,19 +3,19 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "cdcmscvhdstore"
+      "value": "masmscvhdstore"
     },
     "vmName": {
-        "value": "cdcvm001"
+        "value": "masvm001"
     },
     "adminUsername": {
-      "value": "cdcmsc"
+      "value": "masmsc"
     },
     "adminPassword": {
       "value": "P@ssw0rd!"
     },
     "dnsNameForPublicIP": {
-      "value": "cdcmsc001"
+      "value": "masmsc001"
     },
     "windowsOSVersion": {
       "value": "2012-R2-Datacenter"
