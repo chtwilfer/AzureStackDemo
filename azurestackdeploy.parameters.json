@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "azmscvhdstore"
+      "value": "masmscvhdstore"
     },
     "vmName1": {
-        "value": "azvm001"
+        "value": "masvm001"
     },
     "vmName2": {
-        "value": "azvm002"
+        "value": "masvm002"
     },
     "adminUsername": {
       "value": "azureadmin"
@@ -18,25 +18,25 @@
       "value": "P@ssw0rd!"
     },
     "dnsNameForPublicIP": {
-      "value": "azmsc001"
+      "value": "masmsc001"
     },
     "windowsOSVersion": {
       "value": "2012-R2-Datacenter"
     },
     "AddressPrefix": {
-      "value": "10.31.0.0/16"
+      "value": "10.1.0.0/16"
     },
     "Subnet": {
-      "value": "10.31.0.0/24"
+      "value": "10.1.0.0/24"
     },
     "GatewaySubnet": {
-      "value": "10.31.254.0/24"
+      "value": "10.1.254.0/24"
     },
     "LocalGatewayIPAddress": {
       "value": "1.2.3.4"
     },
-    "LocalGatewayAddressPrefix": {
-      "value": "10.1.0.0/16"
+    "LocalGatewayAddressPrefix":{
+      "value": "10.31.0.0/16"
     }
   }
 }

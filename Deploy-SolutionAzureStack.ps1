@@ -5,14 +5,19 @@ Get-AzureRmSubscription -SubscriptionName "Mark POC"  | Select-AzureRmSubscripti
 Get-AzureRmSubscription
 Get-AzureRmResourceGroup
 
-$rg = New-AzureRmResourceGroup -Name MAS-Demo -Location "local" -Force
+$rg = New-AzureRmResourceGroup -Name HybridCloud -Location "local" -Force
 $Deploysettings = @{
     Name = 'MASVMDeploy1'
     ResourceGroupName= $rg.ResourceGroupName 
     TemplateFile = 'https://raw.githubusercontent.com/markscholman/AzureStackDemo/master/azuredeploy.json' 
-    TemplateParameterFile = '.\azuredeploy.parameters.json'
+    #TemplateFile = '.\azuredeploy.json'
+    TemplateParameterFile = '.\azurestackdeploy.parameters.json'
     Verbose = $true
 }
 New-AzureRmResourceGroupDeployment @Deploysettings
 
-Get-AzureRmResourceGroup
+### Post deployment - Connect VPN:
+$presharedkey = "MySuperSecretKey10"
+$gw = Get-AzureRmVirtualNetworkGateway -Name Gateway -ResourceGroupName $rg.ResourceGroupName
+$ls = Get-AzureRmLocalNetworkGateway -Name LocalGateway -ResourceGroupName $rg.ResourceGroupName
+New-AzureRMVirtualNetworkGatewayConnection -Name AzureStack-Azure -ResourceGroupName $rg.ResourceGroupName -Location $rg.Location -VirtualNetworkGateway1 $gw -LocalNetworkGateway2 $ls -ConnectionType IPsec -RoutingWeight 10 -SharedKey $presharedkey

@@ -12,13 +12,15 @@
             "type": "string",
             "metadata": {
                 "description": "Name of the first VM."
-            }
+            },
+            "defaultValue": "vm001"
         },
         "vmName2": {
             "type": "string",
             "metadata": {
                 "description": "Name of the second VM."
-            }
+            },
+            "defaultValue": "vm002"
         },
         "adminUsername": {
             "type": "string",
@@ -52,22 +54,23 @@
         },
         "AddressPrefix": {
             "type": "string",
-            "defaultValue": "10.1.0.0/16"
+            "defaultValue": "10.31.0.0/16"
         },
         "Subnet" : {
             "type": "string",
-            "defaultValue": "10.1.0.0/24"
+            "defaultValue": "10.31.0.0/24"
         },
         "GatewaySubnet": {
             "type": "string",
-            "defaultValue": "10.1.254.0/24"
+            "defaultValue": "10.31.254.0/24"
         },
         "LocalGatewayIPAddress": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "1.2.3.4"
         },
         "LocalGatewayAddressPrefix" : {
             "type": "string",
-            "defaultValue": "10.31.0.0/16"
+            "defaultValue": "10.1.0.0/16"
         }
     },
     "variables": {

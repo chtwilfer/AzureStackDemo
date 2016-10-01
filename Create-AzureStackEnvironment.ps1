@@ -17,8 +17,8 @@ Get-AzureRmEnvironment | select Name, ManagementPortalUrl, ResourceManagerUrl
 
 #region TP2
 $Domain = "azurestack.nl"
-$password = ConvertTo-SecureString "MySecret" -AsPlainText -Force
-$Credential = New-Object System.Management.Automation.PSCredential "MYACCOUNT@MYDIR.onmicrosoft.com", $password
+#$password = ConvertTo-SecureString "MySecret" -AsPlainText -Force
+#$Credential = New-Object System.Management.Automation.PSCredential "MYACCOUNT@MYDIR.onmicrosoft.com", $password
 $Credential = Get-Credential
 $Name = "AzureStack"
 $ResourceManagerEndpoint = "https://api." + $Domain
