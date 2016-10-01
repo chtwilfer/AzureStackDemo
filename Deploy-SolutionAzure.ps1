@@ -1,4 +1,5 @@
-﻿Add-AzureRmAccount -Verbose
+﻿Set-Location "$env:USERPROFILE\Documents\GitHub\AzureStackDemo"
+Add-AzureRmAccount -Verbose
 # Get Azure subscription
 Get-AzureRmSubscription -SubscriptionName "Visual Studio Enterprise with MSDN"  | Select-AzureRmSubscription
 

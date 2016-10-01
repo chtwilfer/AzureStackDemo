@@ -5,8 +5,11 @@
     "newStorageAccountName": {
       "value": "masmscvhdstore"
     },
-    "vmName": {
+    "vmName1": {
         "value": "masvm001"
+    },
+    "vmName2": {
+        "value": "masvm002"
     },
     "adminUsername": {
       "value": "masmsc"
@@ -19,6 +22,9 @@
     },
     "windowsOSVersion": {
       "value": "2012-R2-Datacenter"
+    },
+    "LocalGatewayIPAddress": {
+      "value": "1.2.3.4"
     }
   }
 }
